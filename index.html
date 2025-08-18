@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portal de Publicidad</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+	<div class="logo">
+		<img src="img/LogoPubli.png" alt="Logo del portal">
+	</div>
+    <marquee><h1>Directorio de Negocios</h1> *** El Lugar Donde la Publicidada Cobra Vida ***</marquee>
+	<div class="logo">
+		<img src="img/LogoPubli.png" alt="Logo del portal">
+	</div>
+    <input type="text" id="search" placeholder="Buscar negocio...">
+</header>
+
+<div>
+	<section class="carousel">
+  <div class="carousel-container" id="carousel-container">
+      <div class="carousel-slide"><img src="img/banner1.jpg" alt="Banner 1"></div>
+      <div class="carousel-slide"><img src="img/banner2.jpg" alt="Banner 2"></div>
+      <div class="carousel-slide"><img src="img/banner3.jpg" alt="Banner 3"></div>
+      <div class="carousel-slide"><img src="img/banner4.jpg" alt="Banner 4"></div>
+  </div>
+
+  <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+  <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+
+  <div class="carousel-indicators"></div>
+</section>
+
+</div>
+
+<main>
+    <div id="category-buttons" class="buttons"></div>
+    <div id="business-list" class="business-list"></div>
+</main>
+
+<script>
+let businesses = [];
+let banners = [];
+let slideIndex = 0;
+let autoSlideInterval;
+let startX = 0;
+
+// Cargar JSON
+async function loadData() {
+    try {
+        const res = await fetch('data.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error("No se pudo cargar data.json");
+        const data = await res.json();
+
+        businesses = data.businesses || [];
+        banners = data.banners || [];
+
+        renderBanners(banners);
+        renderCategories(data.categories || []);
+        renderBusinesses(businesses);
+
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+// Carrusel clicable y táctil
+function renderBanners(list) {
+    const container = document.getElementById('carousel-container');
+    container.innerHTML = '';
+
+    list.forEach(b => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.innerHTML = `<img src="${b.image}" alt="Banner">`;
+        slide.onclick = () => scrollToBusiness(b.business);
+        container.appendChild(slide);
+    });
+
+    // Evento táctil para móviles
+    container.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+    container.addEventListener('touchend', e => {
+        let endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) moveSlide(1);
+        if (endX - startX > 50) moveSlide(-1);
+    });
+
+    slideIndex = 0;
+    resetAutoSlide();
+}
+
+//Funciones carrusel
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    if (!slides.length) return;
+    if (index >= slides.length) slideIndex = 0;
+    if (index < 0) slideIndex = slides.length - 1;
+    document.getElementById('carousel-container').style.transform = `translateX(-${slideIndex*100}%)`;
+}
+function moveSlide(n) { slideIndex+=n; showSlide(slideIndex); resetAutoSlide(); }
+function autoSlide() { slideIndex++; showSlide(slideIndex); }
+function resetAutoSlide() { clearInterval(autoSlideInterval); autoSlideInterval=setInterval(autoSlide,4000); }
+
+// Categorías
+function renderCategories(list) {
+    const container = document.getElementById('category-buttons');
+    container.innerHTML = '';
+    const allBtn = document.createElement('button');
+    allBtn.textContent = 'Todos';
+    allBtn.onclick = () => renderBusinesses(businesses);
+    container.appendChild(allBtn);
+
+    list.forEach(cat=>{
+        const btn=document.createElement('button');
+        btn.textContent=cat;
+        btn.onclick=()=>renderBusinesses(businesses.filter(b=>b.category===cat));
+        container.appendChild(btn);
+    });
+}
+//ipv4: 192.168.1.74
+// Negocios
+function renderBusinesses(list) {
+    const container = document.getElementById('business-list');
+    container.innerHTML='';
+    if(!list.length){ 
+        container.innerHTML='<p class="no-results">No hay negocios para mostrar.</p>'; 
+        return; 
+    }
+    list.forEach(item=>{
+        const card=document.createElement('div');
+        card.className='business-card';
+        card.setAttribute('data-name', item.name); // para scroll
+        card.innerHTML=`
+            <img src="${item.images[0]}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p class="category">${item.category}</p>
+            <p>${item.description}</p>
+            <p class="address">${item.address}</p>
+            <a class="whatsapp" href="https://wa.me/${item.phone}" target="_blank">Contactar por WhatsApp</a>
+        `;
+        container.appendChild(card);
+
+        // Aplicar fade-in con retraso para efecto escalonado
+        setTimeout(()=>{ card.classList.add('show'); }, 50);
+    });
+}
+
+// Desplazar suavemente al negocio
+function scrollToBusiness(name){
+    const card = document.querySelector(`.business-card[data-name="${name}"]`);
+    if(card){
+        card.scrollIntoView({behavior:'smooth',block:'start'});
+        card.style.transition='0.5s all';
+        card.style.backgroundColor='#fff7cc';
+        setTimeout(()=>{ card.style.backgroundColor='white'; },1500);
+    }
+}
+
+// Buscador
+document.getElementById('search').addEventListener('input', e=>{
+    const term=e.target.value.toLowerCase();
+    renderBusinesses(businesses.filter(b=>b.name.toLowerCase().includes(term)));
+});
+
+loadData();
+</script>
+
+<script src="carrusel.js"></script>
+
+</body>
+</html>
+
+

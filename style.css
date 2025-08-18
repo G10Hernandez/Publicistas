@@ -1,0 +1,212 @@
+/* Reset básico */
+* {margin:0;padding:0;box-sizing:border-box;}
+body{
+	font-family:Arial,sans-serif;color:#003366;
+	background:linear-gradient(to right,#003366,#b8860b);
+	}
+
+/* Header */
+header{
+    background:linear-gradient(to right,#003366,#b8860b);
+    color:white;padding:15px;text-align:center;
+}
+header h3{margin-bottom:10px;}
+header input{
+    padding:8px;width:80%;max-width:400px;border:none;border-radius:5px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* centra el contenido */
+    position: left;        /* necesario para posicionar el logo */
+    padding: 10px 20px;
+    background: inherit;       /* conserva el fondo actual */
+}
+
+.logo {
+    position: absolute; /* lo saca del flujo normal */
+    left: 20px;         /* lo pega a la izquierda */
+    top: 7%;
+    transform: translateY(-50%); /* centra verticalmente el logo */
+}
+
+.logo img {
+    width: 80px;      /* tamaño fijo del logo */
+    height: auto;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* Botones de categorías */
+.buttons{text-align:center;padding:15px;}
+.buttons button{
+    background-color:#003366;color:#ffd700;border:none;padding:8px 15px;margin:5px;border-radius:5px;cursor:pointer;
+}
+.buttons button:hover{background-color:#002244;}
+
+/* Lista de negocios */
+.business-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;padding:15px;}
+.business-card{background:white;border:1px solid #ddd;border-radius:8px;padding:10px;text-align:center;transition:0.3s;}
+.business-card:hover{box-shadow:0 0 10px rgba(0,0,0,0.2);}
+.business-card img{width:100%;height:100px;object-fit:cover;border-radius:5px;}
+.business-card h3{margin:10px 0 5px;color:#003366;}
+.business-card .category{font-weight:bold;color:#b8860b;}
+.business-card .address{font-size:.9em;color:#555;}
+.whatsapp{display:inline-block;margin-top:10px;padding:8px 12px;background-color:#25d366;color:white;border-radius:5px;text-decoration:none;}
+.whatsapp:hover{background-color:#1ebe5b;}
+.no-results{text-align:center;font-style:italic;color:#666;}
+
+
+/* Carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 250px; /* menos alto */
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* usa 'contain' si no quieres recortes */
+  object-position: center;
+  display: block;
+}
+
+/* Botones */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+.carousel-indicators button.active {
+  background: white;
+}
+
+/* Animación fade-in para tarjetas */
+.business-card img {
+    width: 100%;
+    max-height: 300px;   /* altura máxima */
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.business-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Contenedor en el header */
+#contenedor {
+    width: 200px;
+    height: auto;
+    background-color: #33E0FF;
+    position: absolute;
+    top: -50px;               
+    right: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px black;
+    text-align: center;
+    color: white;
+
+    animation: slideFade 1s ease-out forwards, blink 3s ease-in-out infinite; /* animación + parpadeo */
+}
+
+/* Texto dentro del contenedor */
+#texto {
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Flecha debajo del texto */
+#forma {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 10px solid black;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animación de entrada */
+@keyframes slideFade {
+    0% {
+        opacity: 0;
+        top: -50px;
+    }
+    60% {
+        opacity: 0.5;
+        top: 5px;
+    }
+    80% {
+        top: -3px;
+    }
+    100% {
+        top: 10px;  
+    }
+}
+
+
+/* Responsive móvil */
+@media (max-width:768px){
+    header input{width:95%;}
+    .carousel-slide img{height:150px;}
+    .business-card img{height:120px;}
+}
+
+#contenedor {
+    animation: slideFade 1s ease-out forwards, blink 3s ease-in-out infinite !important;
+}
