@@ -1,7 +1,7 @@
 /* Reset básico */
 * {margin:0;padding:0;box-sizing:border-box;}
 body{
-	font-family:Arial,sans-serif;color:#003366;
+	font-family:Castellar,sans-serif;color:#003366;
 	background:linear-gradient(to right,#003366,#b8860b);
 	}
 
@@ -31,8 +31,8 @@ header input{
     transform: translateY(-50%); /* centra verticalmente el logo */
 }
 
-header .logo img {
-    max-width: 180px; /* tamaño normal en escritorio */
+.logo img {
+    max-width: 150px; /* tamaño normal en escritorio */
     height: auto;
 }
 
@@ -42,7 +42,7 @@ header .logo img {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 280px) {
     header .logo img {
         max-width: 80px; /* aún más pequeño en pantallas chicas */
     }

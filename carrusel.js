@@ -1,6 +1,32 @@
 let slideIndex = 0;
 let autoSlideInterval;
 
+fetch("data.json")
+  .then(response => response.json())
+  .then(data => {
+    const contenedor = document.getElementById("carrusel-contenedor");
+    data.banners.forEach(banner => {
+      const img = document.createElement("img");
+      img.src = banner.src;
+      img.alt = banner.alt;
+      contenedor.appendChild(img);
+    });
+
+    // animación automática
+    let index = 0;
+    const slides = contenedor.querySelectorAll("img");
+    function mostrarSlide() {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? "block" : "none";
+      });
+      index = (index + 1) % slides.length;
+    }
+    mostrarSlide();
+    setInterval(mostrarSlide, 3000);
+  })
+  .catch(err => console.error("Error cargando banners:", err));
+
+
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-slide');
     const indicators = document.querySelectorAll('.carousel-indicators button');
