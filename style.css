@@ -24,30 +24,24 @@ header input{
     background: inherit;       /* conserva el fondo actual */
 }
 
+/* Tamaño normal (pantallas grandes) */
 .logo {
-    position: absolute; /* lo saca del flujo normal */
-    left: 3px;         /* lo pega a la izquierda */
-    top: 7%;
-    transform: translateY(-50%); /* centra verticalmente el logo */
+  max-width: 180px; /* ajusta a tu gusto */
+  height: auto;
 }
 
-.logo img {
-    max-width: 150px; /* tamaño normal en escritorio */
-    height: auto;
-}
-
+/* Tamaño más pequeño en celulares */
 @media (max-width: 768px) {
-    header .logo img {
-        max-width: 100px; /* tamaño reducido en móvil */
-    }
+  .logo {
+    max-width: 100px; /* más pequeño para celular */
+  }
 }
 
-@media (max-width: 280px) {
-    header .logo img {
-        max-width: 80px; /* aún más pequeño en pantallas chicas */
-    }
+@media (max-width: 480px) {
+  .logo {
+    max-width: 80px; /* aún más pequeño en pantallas muy chicas */
+  }
 }
-
 
 
 .titulo {
