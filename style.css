@@ -15,42 +15,6 @@ header input{
     padding:8px;width:80%;max-width:400px;border:none;border-radius:5px;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;   /* centra el contenido */
-    position: left;        /* necesario para posicionar el logo */
-    padding: 10px 20px;
-    background: inherit;       /* conserva el fondo actual */
-}
-
-/* Tamaño normal (pantallas grandes) */
-.logo {
-  max-width: 180px; /* ajusta a tu gusto */
-  height: auto;
-}
-
-/* Tamaño más pequeño en celulares */
-@media (max-width: 768px) {
-  .logo {
-    max-width: 100px; /* más pequeño para celular */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    max-width: 80px; /* aún más pequeño en pantallas muy chicas */
-  }
-}
-
-
-.titulo {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0;
-}
-
-
 /* Botones de categorías */
 .buttons{text-align:center;padding:15px;}
 .buttons button{
@@ -65,7 +29,7 @@ header input{
 .business-card img{width:100%;height:100px;object-fit:cover;border-radius:5px;}
 .business-card h3{margin:10px 0 5px;color:#003366;}
 .business-card .category{font-weight:bold;color:#b8860b;}
-.business-card .address{font-size:.9em;color:#555;}
+/*.business-card .address{font-size:.9em;color:#555;}*/
 .whatsapp{display:inline-block;margin-top:10px;padding:8px 12px;background-color:#25d366;color:white;border-radius:5px;text-decoration:none;}
 .whatsapp:hover{background-color:#1ebe5b;}
 .no-results{text-align:center;font-style:italic;color:#666;}
@@ -139,11 +103,14 @@ header input{
 
 /* Animación fade-in para tarjetas */
 .business-card img {
-    width: 100%;
-    max-height: 300px;   /* altura máxima */
-    height: auto;
-    object-fit: contain;
-    border-radius: 6px;
+  width: 100%;          /* ocupa todo el ancho de la tarjeta */
+  max-width: 280px;     /* ancho máximo estándar */
+  height: 180px;        /* altura fija estándar */
+  object-fit: contain;  /* ajusta la imagen sin cortarla */
+  border-radius: 8px;   /* bordes redondeados, opcional */
+  background-color: #f8f8f8; /* fondo neutro si sobra espacio */
+  display: block;
+  margin: 0 auto 10px;  /* centrado y separación abajo */
 }
 
 .business-card.show {
@@ -152,69 +119,90 @@ header input{
 }
 
 
-/* Contenedor en el header 
-#contenedor {
-    width: 200px;
-    height: auto;
-    background-color: #33E0FF;
-    position: absolute;
-    top: -50px;               
-    right: 10px;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 1px 1px 5px black;
-    text-align: center;
-    color: white;
-
-    animation: slideFade 1s ease-out forwards, blink 3s ease-in-out infinite; /* animación + parpadeo */
-}
-
-/* Texto dentro del contenedor 
-#texto {
-    font-weight: bold;
-    font-size: 16px;
-    position: relative;
-    display: inline-block;
-}
-
- Flecha debajo del texto 
-#forma {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-top: 10px solid black;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
- Animación de entrada */
-@keyframes slideFade {
-    0% {
-        opacity: 0;
-        top: -50px;
-    }
-    60% {
-        opacity: 0.5;
-        top: 5px;
-    }
-    80% {
-        top: -3px;
-    }
-    100% {
-        top: 10px;  
-    }
-}
-
-
 /* Responsive móvil */
-@media (max-width:768px){
+ @media (max-width:768px){
     header input{width:95%;}
     .carousel-slide img{height:150px;}
     .business-card img{height:120px;}
 }
 
-#contenedor {
-    animation: slideFade 1s ease-out forwards, blink 3s ease-in-out infinite !important;
+/* ========== HEADER LAYOUT ========== */
+.site-header{
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* logo | texto | buscador */
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(to right,#003366,#b8860b);
+  color: #fff;
+}
+
+/* contenedor del logo */
+.site-header .brand { display:flex; align-items:center; }
+
+/* tamaño del logo */
+.site-header .brand-logo{
+  height: 72px;       /* Desktop */
+  width: auto;
+  display: block;
+}
+
+/* el marquee no debe romper línea */
+.site-header .headline{
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.2;
+  color:#fff;
+}
+
+/* buscador a la derecha */
+.site-header input#search{
+  padding: 8px 10px;
+  width: 260px;
+  max-width: 38vw;
+  border: none;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE: en móvil el buscador pasa abajo y el logo se hace más chico */
+@media (max-width: 768px){
+  .site-header{
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+  .site-header input#search{
+    grid-column: 1 / -1; /* ocupa todo el ancho abajo */
+    width: 100%;
+    margin-top: 8px;
+  }
+  .site-header .brand-logo{ height: 36px; } /* más pequeño en tablet/móvil */
+}
+
+@media (max-width: 480px){
+  .site-header .brand-logo{ height: 30px; } /* aún más pequeño en celular */
+  .site-header .headline{ font-size: 0.95rem; }
+}
+
+/* ========== TIPOGRAFÍA EN TARJETAS ========== */
+.business-card h2{ 
+  margin: 10px 0 6px; 
+  font-family: 'Tahoma', sans-serif; /* Fuente distinta si quieres */
+  color:#003366; 
+  font-size: 1rem;        /* antes era grande; ahora más discreto */
+  line-height: 1.15;
+}
+.business-card p{ 
+  font-size: 0.9rem; 
+  font-family: 'Verdana'; /* Fuente distinta si quieres */
+  line-height: 1.35; 
+}
+.business-card .address{ 
+  font-size: 0.8rem; 
+  font-family: 'Tahoma', bold; /* Fuente distinta si quieres */
+  color:#555; 
+ }
+.buttons button{
+  font-size: 0.9rem;
+  padding: 6px 12px;
 }

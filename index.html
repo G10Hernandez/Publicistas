@@ -2,22 +2,23 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Portal de Publicidad</title>
+<title>Vitrina Digital</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-	<div class="logo">
-		<img src="img/LogoPubli.png" alt="Logo del portal" class="logo">
-	</div>
-		
-	<marquee behavior="alternate" direction="up" width="80%">
-	<marquee direction="right" behavior="alternate"><h1>Directorio de Negocios</h1> *** El Lugar Donde la Publicidada Cobra Vida ***</marquee>
-	</marquee>
-    <input type="text" id="search" placeholder="Buscar negocio...">
+<header class="site-header">
+  <div class="brand">
+    <img src="img/LogoPubli.png" alt="Logo del portal" class="brand-logo">
+  </div>
+
+  <marquee class="headline" behavior="alternate">
+    <strong>Directorio de Negocios   </strong>*Haz Crecer tu Negoción en un Click*</marquee>
+
+  <input type="text" id="search" placeholder="Buscar negocio...">
 </header>
+
 
 <div>
 	<section class="carousel">
@@ -120,7 +121,7 @@ function renderCategories(list) {
         container.appendChild(btn);
     });
 }
-//ipv4: 192.168.1.74
+
 // Negocios
 function renderBusinesses(list) {
     const container = document.getElementById('business-list');
@@ -139,7 +140,7 @@ function renderBusinesses(list) {
             <p class="category">${item.category}</p>
             <p>${item.description}</p>
             <p class="address">${item.address}</p>
-            <a class="whatsapp" href="https://wa.me/${item.phone}" target="_blank">Contactar por WhatsApp</a>
+            <a class="whatsapp" href="https://wa.me/${item.phone}" target="_blank"><h6>Contactar por WhatsApp</h6></a>
         `;
         container.appendChild(card);
 
@@ -172,5 +173,3 @@ loadData();
 
 </body>
 </html>
-
-
