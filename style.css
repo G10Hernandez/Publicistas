@@ -31,17 +31,23 @@ header input{
     transform: translateY(-50%); /* centra verticalmente el logo */
 }
 
-/* Logo responsive */
 header .logo img {
-  max-width: 150px;
-  height: auto;
+    max-width: 180px; /* tamaño normal en escritorio */
+    height: auto;
 }
 
-@media (max-width: 600px) {
-  header .logo img {
-    max-width: 80px; /* más chico en celular */
-  }
+@media (max-width: 768px) {
+    header .logo img {
+        max-width: 100px; /* tamaño reducido en móvil */
+    }
 }
+
+@media (max-width: 480px) {
+    header .logo img {
+        max-width: 80px; /* aún más pequeño en pantallas chicas */
+    }
+}
+
 
 
 .titulo {
