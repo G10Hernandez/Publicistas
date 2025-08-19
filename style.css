@@ -31,10 +31,18 @@ header input{
     transform: translateY(-50%); /* centra verticalmente el logo */
 }
 
-.logo img {
-    width: 80px;      /* tamaño fijo del logo */
-    height: auto;
+/* Logo responsive */
+header .logo img {
+  max-width: 150px;
+  height: auto;
 }
+
+@media (max-width: 600px) {
+  header .logo img {
+    max-width: 80px; /* más chico en celular */
+  }
+}
+
 
 .titulo {
     font-size: 1.5rem;

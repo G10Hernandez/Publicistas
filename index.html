@@ -80,16 +80,16 @@ function renderBanners(list) {
         container.appendChild(slide);
     });
 
-    // Evento táctil para móviles
-    container.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
-    container.addEventListener('touchend', e => {
-        let endX = e.changedTouches[0].clientX;
-        if (startX - endX > 50) moveSlide(1);
+ // Evento táctil para móviles
+container.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+container.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+		if (startX - endX > 50) moveSlide(1);
         if (endX - startX > 50) moveSlide(-1);
     });
 
-    slideIndex = 0;
-    resetAutoSlide();
+slideIndex = 0;
+resetAutoSlide();
 }
 
 //Funciones carrusel
