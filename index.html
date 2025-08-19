@@ -12,10 +12,10 @@
 	<div class="logo">
 		<img src="img/LogoPubli.png" alt="Logo del portal">
 	</div>
-    <marquee><h1>Directorio de Negocios</h1> *** El Lugar Donde la Publicidada Cobra Vida ***</marquee>
-	<div class="logo">
-		<img src="img/LogoPubli.png" alt="Logo del portal">
-	</div>
+		
+	<marquee behavior="alternate" direction="up" width="80%">
+	<marquee direction="right" behavior="alternate"><h1>Directorio de Negocios</h1> *** El Lugar Donde la Publicidada Cobra Vida ***</marquee>
+	</marquee>
     <input type="text" id="search" placeholder="Buscar negocio...">
 </header>
 
@@ -80,7 +80,7 @@ function renderBanners(list) {
         container.appendChild(slide);
     });
 
- // Evento táctil para móviles
+// Evento táctil para móviles
 container.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
 container.addEventListener('touchend', e => {
     let endX = e.changedTouches[0].clientX;

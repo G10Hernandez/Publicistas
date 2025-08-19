@@ -26,7 +26,7 @@ header input{
 
 .logo {
     position: absolute; /* lo saca del flujo normal */
-    left: 20px;         /* lo pega a la izquierda */
+    left: 3px;         /* lo pega a la izquierda */
     top: 7%;
     transform: translateY(-50%); /* centra verticalmente el logo */
 }
@@ -152,7 +152,7 @@ header .logo img {
 }
 
 
-/* Contenedor en el header */
+/* Contenedor en el header 
 #contenedor {
     width: 200px;
     height: auto;
@@ -169,7 +169,7 @@ header .logo img {
     animation: slideFade 1s ease-out forwards, blink 3s ease-in-out infinite; /* animación + parpadeo */
 }
 
-/* Texto dentro del contenedor */
+/* Texto dentro del contenedor 
 #texto {
     font-weight: bold;
     font-size: 16px;
@@ -177,7 +177,7 @@ header .logo img {
     display: inline-block;
 }
 
-/* Flecha debajo del texto */
+ Flecha debajo del texto 
 #forma {
     position: absolute;
     width: 0;
@@ -189,7 +189,7 @@ header .logo img {
     transform: translateX(-50%);
 }
 
-/* Animación de entrada */
+ Animación de entrada */
 @keyframes slideFade {
     0% {
         opacity: 0;
