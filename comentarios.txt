@@ -19,3 +19,9 @@ To https://github.com/G10Hernandez/Publicistas.git
 
 C:\xampp\htdocs\Publicidad>git push
 Everything up-to-date
+
+
+Cuenta ApiNews: fbc9235a922348bd833eaf0e8f0aa106
+
+contraseña apinews: Gvalentenota61
+

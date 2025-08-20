@@ -19,6 +19,8 @@ header input{
 .buttons{text-align:center;padding:15px;}
 .buttons button{
     background-color:#003366;color:#ffd700;border:none;padding:8px 15px;margin:5px;border-radius:5px;cursor:pointer;
+	box-shadow: 0 4px 8px rgba(255, 215, 0, 0.7);
+    transition: all 0.3s ease;
 }
 .buttons button:hover{background-color:#002244;}
 
@@ -30,7 +32,8 @@ header input{
 .business-card h3{margin:10px 0 5px;color:#003366;}
 .business-card .category{font-weight:bold;color:#b8860b;}
 /*.business-card .address{font-size:.9em;color:#555;}*/
-.whatsapp{display:inline-block;margin-top:10px;padding:8px 12px;background-color:#25d366;color:white;border-radius:5px;text-decoration:none;}
+.whatsapp{display:inline-block;margin-top:10px;padding:8px 12px;background-color:#25d366;color:white;border-radius:5px;text-decoration:none;box-shadow: 0 4px 8px rgba(0, 100, 0, 0.9);
+    transition: all 0.3s ease;}
 .whatsapp:hover{background-color:#1ebe5b;}
 .no-results{text-align:center;font-style:italic;color:#666;}
 
