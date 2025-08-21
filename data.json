@@ -69,9 +69,9 @@
             "images": ["img/mecanic.png"]
         },
       	{
-            "name": "Reparación y actualización de Computadoras",
+            "name": "Mantenimiento y Accesorios Tecnológicos",
             "category": "Tecnología",
-            "description": "Reparación de Celulares, Moviles y PC.",
+            "description": "Todo para Celulares, Moviles y PC.",
             "address": "Av. San Juan 1578",
             "phone": "5215558889999",
             "images": ["img/tecno1.jpg"]

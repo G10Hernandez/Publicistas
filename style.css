@@ -1,7 +1,7 @@
 /* Reset básico */
 * {margin:0;padding:0;box-sizing:border-box;}
 body{
-	font-family:Castellar,sans-serif;color:#003366;
+	font-family:Georgia Pro Semibold,Estrangelo Edessa;color:#003366;
 	background:linear-gradient(to right,#003366,#b8860b);
 	}
 
@@ -25,12 +25,22 @@ header input{
 .buttons button:hover{background-color:#002244;}
 
 /* Lista de negocios */
-.business-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;padding:15px;}
-.business-card{background:white;border:1px solid #ddd;border-radius:8px;padding:10px;text-align:center;transition:0.3s;}
+.business-list{display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;padding:15px;}
+.business-card{background:#75D1F0;
+border:1px solid #ddd;
+border-radius:8px;
+padding:10px;
+text-align:center;
+transition:0.3s;}
 .business-card:hover{box-shadow:0 0 10px rgba(0,0,0,0.2);}
-.business-card img{width:100%;height:100px;object-fit:cover;border-radius:5px;}
-.business-card h3{margin:10px 0 5px;color:#003366;}
-.business-card .category{font-weight:bold;color:#b8860b;}
+.business-card img{width:100%;
+height:100px;
+object-fit:cover;
+border-radius:5px;}
+.business-card .category{font-weight:italic;
+color:#b8860b;}
 /*.business-card .address{font-size:.9em;color:#555;}*/
 .whatsapp{display:inline-block;margin-top:10px;padding:8px 12px;background-color:#25d366;color:white;border-radius:5px;text-decoration:none;box-shadow: 0 4px 8px rgba(0, 100, 0, 0.9);
     transition: all 0.3s ease;}
@@ -106,9 +116,9 @@ header input{
 
 /* Animación fade-in para tarjetas */
 .business-card img {
-  width: 100%;          /* ocupa todo el ancho de la tarjeta */
-  max-width: 280px;     /* ancho máximo estándar */
-  height: 180px;        /* altura fija estándar */
+  width: 70%;          /* ocupa todo el ancho de la tarjeta */
+  max-width: 190px;     /* ancho máximo estándar */
+  height: 120px;        /* altura fija estándar */
   object-fit: contain;  /* ajusta la imagen sin cortarla */
   border-radius: 8px;   /* bordes redondeados, opcional */
   background-color: #f8f8f8; /* fondo neutro si sobra espacio */
@@ -116,11 +126,44 @@ header input{
   margin: 0 auto 10px;  /* centrado y separación abajo */
 }
 
+/* ========== TIPOGRAFÍA EN TARJETAS ========== */
+.business-card h3{ 
+  margin: 10px 0 6px; 
+  font-family: 'Oleo Script'; /* Fuente distinta si quieres */
+  color:#003366; 
+  font-size: 1rem;        /* antes era grande; ahora más discreto */
+  line-height: 1;
+}
+.business-card p{ 
+  font-size: 0.7rem; 
+  font-family: 'Verdana'; /* Fuente distinta si quieres */
+  line-height: 1.35; 
+}
+.business-card .address{ 
+  font-size: 0.6rem; 
+  font-family: 'Tahoma', bold; /* Fuente distinta si quieres */
+  color:#555; 
+ }
+.buttons button{
+  font-size: 0.7rem;
+  padding: 6px 12px;
+}
+
+.business-card{
+  width: 240px;         /* ancho fijo */
+  max-width: 77%;      /* asegura que no se salga en móvil */
+  height: 310px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background: #fff;
+  text-align: center;
+}
+
 .business-card.show {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 /* Responsive móvil */
  @media (max-width:768px){
@@ -145,7 +188,7 @@ header input{
 
 /* tamaño del logo */
 .site-header .brand-logo{
-  height: 72px;       /* Desktop */
+  height: 80px;       /* Desktop */
   width: auto;
   display: block;
 }
@@ -154,7 +197,7 @@ header input{
 .site-header .headline{
   white-space: nowrap;
   overflow: hidden;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   line-height: 1.2;
   color:#fff;
 }
@@ -187,25 +230,3 @@ header input{
   .site-header .headline{ font-size: 0.95rem; }
 }
 
-/* ========== TIPOGRAFÍA EN TARJETAS ========== */
-.business-card h2{ 
-  margin: 10px 0 6px; 
-  font-family: 'Tahoma', sans-serif; /* Fuente distinta si quieres */
-  color:#003366; 
-  font-size: 1rem;        /* antes era grande; ahora más discreto */
-  line-height: 1.15;
-}
-.business-card p{ 
-  font-size: 0.9rem; 
-  font-family: 'Verdana'; /* Fuente distinta si quieres */
-  line-height: 1.35; 
-}
-.business-card .address{ 
-  font-size: 0.8rem; 
-  font-family: 'Tahoma', bold; /* Fuente distinta si quieres */
-  color:#555; 
- }
-.buttons button{
-  font-size: 0.9rem;
-  padding: 6px 12px;
-}
