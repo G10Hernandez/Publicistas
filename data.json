@@ -163,7 +163,15 @@
 			"address": "Av. Jardin #84-4 Col. José Pino Suárez",
 			"phone": "525518406693",
 			"images": ["img/carparvi.jpg"]
-		}			
+		},	
+		{
+			"name": "CArniceria Los Flacos",
+			"category": "Alimentos y Comidas",
+			"description": "Gran Variedad de Carnicos",
+			"address": "Mercado Municipal Jardines",
+			"phone": "525591319801",
+			"images": ["img/carnicos1.jpg"]
+		}
     ]
 }
 

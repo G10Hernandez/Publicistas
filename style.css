@@ -8,7 +8,7 @@ body{
 /* Header */
 header{
     background:linear-gradient(to right,#003366,#b8860b);
-    color:white;padding:15px;text-align:center;
+    color:#B1DFF0;padding:15px;text-align:center;
 }
 header h3{margin-bottom:10px;}
 header input{
