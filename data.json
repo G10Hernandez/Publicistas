@@ -165,12 +165,12 @@
 			"images": ["img/carparvi.jpg"]
 		},	
 		{
-			"name": "Clínica Dental Diente Fino",
-			"category": "Salud",
-			"description": "Ortodoncia, Endodoncia, etc.",
-			"address": "Jardines Botánicos Mza. 26 Lt 7 C.3",
-			"phone": "525591319801",
-			"images": ["img/medic2.jpg"]
+			"name": "Carniceria Los Flacos",
+			"category": "Alimentos y Comidas",
+			"description": "Todo tipo de cortes y Más.",
+			"address": "Mercado Jardines Local 36",
+			"phone": "525535680349",
+			"images": ["img/carniceria1.jpg"]
 		}
     ]
 }

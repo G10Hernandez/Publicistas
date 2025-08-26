@@ -70,16 +70,36 @@ async function loadData() {
 
 // Carrusel clicable y táctil
 function renderBanners(list) {
-    const container = document.getElementById('carousel-container');
-    container.innerHTML = '';
+  const container = document.getElementById('carousel-container');
+  container.innerHTML = '';
 
-    list.forEach(b => {
-        const slide = document.createElement('div');
-        slide.className = 'carousel-slide';
-        slide.innerHTML = `<img src="${b.image}" alt="Banner">`;
-        slide.onclick = () => scrollToBusiness(b.business);
-        container.appendChild(slide);
-    });
+  list.forEach(b => {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+
+    // imagen (usa la propiedad que tengas en data.json: aquí usamos "image")
+    const img = document.createElement('img');
+    img.src = b.image;               // <-- asegúrate que data.json use "image"
+    img.alt = b.business || 'Banner';
+    slide.appendChild(img);
+
+    // rótulo superior
+    const caption = document.createElement('div');
+    caption.className = 'banner-caption-top';
+    caption.textContent = b.business || '';
+    slide.appendChild(caption);
+
+    // click en slide (si quieres desplazar a negocio)
+    slide.onclick = () => scrollToBusiness(b.business);
+
+    container.appendChild(slide);
+  });
+
+  // re-inicializa el carrusel
+  slideIndex = 0;
+  resetAutoSlide();
+}
+
 
 // Evento táctil para móviles
 container.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
@@ -89,8 +109,7 @@ container.addEventListener('touchend', e => {
         if (endX - startX > 50) moveSlide(-1);
     });
 
-slideIndex = 0;
-resetAutoSlide();
+
 }
 
 //Funciones carrusel
