@@ -171,6 +171,14 @@
 			"address": "Mercado Jardines Local 36",
 			"phone": "525535680349",
 			"images": ["img/carniceria1.jpg"]
+		},	
+		{
+			"name": "Gas Estacionario Ricardo Olmedo",
+			"category": "Servicios",
+			"description": "Lunes a Sábado - 7am a 19pm.",
+			"address": "Domingos 8am a 17pm",
+			"phone": "525566961709",
+			"images": ["img/gasera1.jpg"]
 		}
     ]
 }
