@@ -15,6 +15,10 @@
 		{
             "image": "img/banner4.jpg",
             "business": "Carniceria Los Flacos"
+        },
+		{
+            "image": "img/banner5.jpg",
+            "business": "Agua Purificada AguaPlash"
         }
     ],
      "categories": [
