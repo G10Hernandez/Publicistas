@@ -8,7 +8,7 @@ body{
 /* Header */
 header{
     background:linear-gradient(to right,#003366,#b8860b);
-    color:#B1DFF0;padding:15px;text-align:center;
+    color:white;padding:15px;text-align:center;
 }
 header h3{margin-bottom:10px;}
 header input{
@@ -228,29 +228,5 @@ color:#b8860b;}
 @media (max-width: 480px){
   .site-header .brand-logo{ height: 30px; } /* aún más pequeño en celular */
   .site-header .headline{ font-size: 0.95rem; }
-}
-
-/* Texto superpuesto en banners */
-.banner-caption {
-  position: absolute;
-  bottom: 15px;          /* lo acerca al borde inferior */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5); /* fondo semitransparente */
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 6px;
-  text-align: center;
-  max-width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* aseguramos que cada slide pueda contener elementos absolutos */
-.carousel-slide {
-  position: relative;
 }
 
