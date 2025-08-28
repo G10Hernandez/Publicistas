@@ -1,8 +1,8 @@
 {
 	"banners": [
         {
-            "image": "img/banner1.png",
-            "business": "Café Central"
+            "image": "img/coppel1.jpg",
+            "business": "Tiendas Coppel"
         },
         {
             "image": "img/banner2.jpg",
@@ -18,7 +18,7 @@
         },
 		{
             "image": "img/banner5.jpg",
-            "business": "Agua Purificada AguaPlash"
+            "business": "Agua Purificada Inmaculada"
         }
     ],
      "categories": [
