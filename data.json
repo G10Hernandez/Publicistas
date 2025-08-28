@@ -183,6 +183,14 @@
 			"address": "Domingos 8am a 17pm",
 			"phone": "525566961709",
 			"images": ["img/gasera1.jpg"]
+		},	
+		{
+			"name": "CENDIPI Reforma",
+			"category": "Educación",
+			"description": "Atención Integral de Calidad",
+			"address": "Maternales - Lactandes - Preescolar",
+			"phone": "525529056730",
+			"images": ["img/CENDIPIReforma.jpg"]
 		}
     ]
 }
