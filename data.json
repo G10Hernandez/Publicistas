@@ -37,7 +37,7 @@
             "category": "Alimentos y Comidas",
             "description": "El mejor café de la ciudad, abierto todos los días.",
             "address": "Av. Principal 123",
-            "phone": "5215555555555",
+            "phone": "525519259552",
             "images": ["img/cafe1.jpg"]
         },
 		{
@@ -45,7 +45,7 @@
             "category": "Alimentos y Comidas",
             "description": "El Pollo más Gallo de mi Tierra.",
             "address": "Jardines de las Delicias Mza.25 Lt. 27 Casa 46",
-            "phone": "5215555555555",
+            "phone": "525519259552",
             "images": ["img/pollo1.jpg"]
         },
         {
@@ -53,7 +53,7 @@
             "category": "Tiendas",
             "description": "Ropa y accesorios de moda para toda la familia.",
             "address": "Calle Comercio 45",
-            "phone": "5215556667777",
+            "phone": "525519259552",
             "images": ["img/moda1.jpg"]
         },
 		{
@@ -61,7 +61,7 @@
             "category": "Tiendas",
             "description": "Ropa y Calzado de Moda.",
             "address": "Calle Puente Grande 27",
-            "phone": "5215556667777",
+            "phone": "525519259552",
             "images": ["img/moda2.jpg"]
         },
        	{
@@ -69,7 +69,7 @@
             "category": "Servicios",
             "description": "Reparación de Automotores y Electricos.",
             "address": "Calle Zoquipa 210",
-            "phone": "5215558889999",
+            "phone": "525519259552",
             "images": ["img/mecanic.png"]
         },
       	{
@@ -77,7 +77,7 @@
             "category": "Tecnología",
             "description": "Todo para Celulares, Moviles y PC.",
             "address": "Av. San Juan 1578",
-            "phone": "5215558889999",
+            "phone": "525519259552",
             "images": ["img/tecno1.jpg"]
         },
        	{
@@ -85,7 +85,7 @@
             "category": "Salud",
             "description": "Atención las 24 HRS.",
             "address": "Av. Guerrero  3258",
-            "phone": "5215558889999",
+            "phone": "525519259552",
             "images": ["img/medic1.jpg"]
         },
       	{
@@ -93,7 +93,7 @@
             "category": "Salud",
             "description": "Una Sonrisa es Salud.",
             "address": "Calzada Vallejo 1987",
-            "phone": "5215558889999",
+            "phone": "525519259552",
             "images": ["img/medic2.jpg"]
         },
 		{
@@ -109,7 +109,7 @@
             "category": "Educación",
             "description": "El Futuro está en tus manos.",
             "address": "Av. Reforma  4129",
-            "phone": "5215558889999",
+            "phone": "525519259552",
             "images": ["img/clases.jpg"]
         },
 		{
@@ -117,7 +117,7 @@
 			"category": "Educación",
 			"description": "Cursos de inglés para todas las edades.",
 			"address": "Av. Universidad #321",
-			"phone": "5215599988776",
+			"phone": "525519259552",
 			"images": ["img/academ1.jpg"]
 		},
 		{
@@ -125,7 +125,7 @@
 			"category": "Belleza",
 			"description": "El Mejor Outfit de México",
 			"address": "Av. Centenario #679",
-			"phone": "5215599988776",
+			"phone": "525519259552",
 			"images": ["img/salon1.jpg"]
 		},
 		{
@@ -133,7 +133,7 @@
 			"category": "Automotriz",
 			"description": "La mejor Tecnología",
 			"address": "Calle Saturnino #1048",
-			"phone": "5215599988776",
+			"phone": "525519259552",
 			"images": ["img/auto1.jpg"]
 		},	
 		{
@@ -141,7 +141,7 @@
 			"category": "Servicios",
 			"description": "Soluciones Prácticas para el Hogar",
 			"address": "Av. Mexiquense Lt. 10 Local 3 y 4",
-			"phone": "525539965439",
+			"phone": "525519259552",
 			"images": ["img/AlternFerre.png"]
 		},	
 		{
@@ -149,7 +149,7 @@
 			"category": "Alimentos y Comidas",
 			"description": "Sabor Oiknico",
 			"address": "Av. Manuel Otero Lt. 10 Local 27",
-			"phone": "525539965439",
+			"phone": "525519259552",
 			"images": ["img/carnita1.jpg"]
 		},	
 		{
@@ -189,15 +189,15 @@
 			"category": "Educación",
 			"description": "Atención Integral de Calidad",
 			"address": "Maternales - Lactandes - Preescolar",
-			"phone": "525529056730",
+			"phone": "525519259552",
 			"images": ["img/CENDIPIReforma.jpg"]
 		},	
 		{
 			"name": "Lava HO",
 			"category": "Servicios",
 			"description": "Atención Integral de Calidad las 24 Hrs.",
-			"address": "Av Mariano Escobedo mza 132 Lt 1. ",
-			"phone": "525529056730",
+			"address": "Av Jardines Botánicos Mza 015 ",
+			"phone": "525519259552",
 			"images": ["img/burbuja.jpg"]
 		}
     ]
