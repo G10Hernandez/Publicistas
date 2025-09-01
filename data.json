@@ -1,8 +1,8 @@
 {
 	"banners": [
         {
-            "image": "img/coppel1.jpg",
-            "business": "Tiendas Coppel"
+            "image": "img/deportes1.jpg",
+            "business": "Salud es Deporte"
         },
         {
             "image": "img/banner2.jpg",
@@ -191,6 +191,14 @@
 			"address": "Maternales - Lactandes - Preescolar",
 			"phone": "525529056730",
 			"images": ["img/CENDIPIReforma.jpg"]
+		},	
+		{
+			"name": "Lava HO",
+			"category": "Servicios",
+			"description": "Atención Integral de Calidad las 24 Hrs.",
+			"address": "Av Mariano Escobedo mza 132 Lt 1. ",
+			"phone": "525529056730",
+			"images": ["img/burbuja.jpg"]
 		}
     ]
 }
