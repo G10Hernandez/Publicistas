@@ -23,13 +23,14 @@
     ],
      "categories": [
 		"Alimentos y Comidas",
-		"Tiendas",
+		"Automotriz",
+		"Belleza",
+		"Educación",
+		"Establecimientos",
 		"Servicios",
 		"Salud",
-		"Belleza",
-		"Tecnología",
-		"Educación",
-		"Automotriz"
+		"Tiendas",
+		"Tecnología"
 	],
     "businesses": [
         {
@@ -63,6 +64,14 @@
             "address": "Calle Puente Grande 27",
             "phone": "525519259552",
             "images": ["img/moda2.jpg"]
+        },
+		{
+            "name": "Papelería Mundo de Papel",
+            "category": "Establecimientos",
+            "description": "Tenemos tu Lista de Utiles",
+            "address": "Jardines de las Delicias mza 26",
+            "phone": "525519259552",
+            "images": ["img/papel1.jpg"]
         },
        	{
             "name": "Servicio Mecánico Tuercas",
@@ -199,6 +208,14 @@
 			"address": "Av Jardines Botánicos",
 			"phone": "525519259552",
 			"images": ["img/burbuja.jpg"]
+		},	
+		{
+			"name": "Papelería Almaraz",
+			"category": "Establecimientos",
+			"description": "Tenemos Todo para tu Inicio a Clases",
+			"address": "Av Jardines Botánicos",
+			"phone": "525519259552",
+			"images": ["img/papel2.jpg"]
 		}
     ]
 }
