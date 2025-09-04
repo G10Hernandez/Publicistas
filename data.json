@@ -105,12 +105,12 @@
 			"images": ["img/farm1.jpg"]
 		},
        	{
-            "name": "Colegio Nuevo Vallarta",
+            "name": "Colegio Liceo Europeo",
             "category": "Educación",
             "description": "El Futuro está en tus manos.",
-            "address": "Av. Reforma  4129",
+            "address": "Av. Vía Morelos",
             "phone": "525519259552",
-            "images": ["img/clases.jpg"]
+            "images": ["img/liceoE.jpg"]
         },
 		{
 			"name": "Academia de Inglés ABC",
@@ -193,10 +193,10 @@
 			"images": ["img/CENDIPIReforma.jpg"]
 		},	
 		{
-			"name": "Lava HO",
+			"name": "Lava Ha",
 			"category": "Servicios",
 			"description": "Atención Integral de Calidad las 24 Hrs.",
-			"address": "Av Jardines Botánicos Mza 015 ",
+			"address": "Av Jardines Botánicos",
 			"phone": "525519259552",
 			"images": ["img/burbuja.jpg"]
 		}
