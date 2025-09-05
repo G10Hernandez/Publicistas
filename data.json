@@ -87,7 +87,7 @@
             "description": "Todo para Celulares, Moviles y PC.",
             "address": "Av. San Juan 1578",
             "phone": "525519259552",
-            "images": ["img/tecno1.jpg"]
+            "images": ["img/tecnoG.gif"]
         },
        	{
             "name": "Servicio Médico General",
@@ -103,7 +103,7 @@
             "description": "Una Sonrisa es Salud.",
             "address": "Calzada Vallejo 1987",
             "phone": "525519259552",
-            "images": ["img/medic2.jpg"]
+            "images": ["img/dentalG.gif"]
         },
 		{
 			"name": "Farmacia Central",
