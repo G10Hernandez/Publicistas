@@ -167,7 +167,7 @@
 			"description": "Armala como tu quieras",
 			"address": "Blvd. Ojo de Agua entre Amaro y Av. Martínez",
 			"phone": "525591319801",
-			"images": ["img/pizza1.jpg"]
+			"images": ["img/pizzaG.gif"]
 		},	
 		{
 			"name": "Carparvi",
@@ -183,7 +183,7 @@
 			"description": "Todo tipo de cortes y Más.",
 			"address": "Mercado Jardines Local 36",
 			"phone": "525535680349",
-			"images": ["img/carniceria1.jpg"]
+			"images": ["img/carnesG.gif"]
 		},	
 		{
 			"name": "Gas Estacionario Ricardo Olmedo",
