@@ -79,7 +79,7 @@
             "description": "Reparación de Automotores y Electricos.",
             "address": "Calle Zoquipa 210",
             "phone": "525519259552",
-            "images": ["img/mecanic.png"]
+            "images": ["img/mecanicG.gif"]
         },
       	{
             "name": "Mantenimiento y Accesorios Tecnológicos",
@@ -167,7 +167,7 @@
 			"description": "Armala como tu quieras",
 			"address": "Blvd. Ojo de Agua entre Amaro y Av. Martínez",
 			"phone": "525591319801",
-			"images": ["img/pizzaG.gif"]
+			"images": ["img/pizzaM.gif"]
 		},	
 		{
 			"name": "Carparvi",
@@ -207,7 +207,7 @@
 			"description": "Atención Integral de Calidad las 24 Hrs.",
 			"address": "Av Jardines Botánicos",
 			"phone": "525519259552",
-			"images": ["img/burbuja.jpg"]
+			"images": ["img/burbujaG.gif"]
 		},	
 		{
 			"name": "Papelería Almaráz",
